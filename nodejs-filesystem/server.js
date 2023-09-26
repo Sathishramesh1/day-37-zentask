@@ -11,7 +11,7 @@ if(!fs.existsSync(outputFolder)){
     fs.mkdirSync(outputFolder)
 }
 
-
+//end point to create file
 app.get('/',(req,res)=>{
     const currentTime=new Date();
     const year=currentTime.getFullYear().toString();
@@ -35,6 +35,7 @@ app.get('/',(req,res)=>{
 
 });
 
+//end point to get files
 app.get("/getFiles",(req,res)=>{
     fs.readdir(outputFolder,(err,files)=>{
      if(err){
